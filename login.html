@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-content-width, initial-scale=1.0">
+  <title>IClone | The best Insta Clone</title>
+  <link rel="stylesheet" href="style_login.css">
+  <link rel="shortcut icon" href="img/Instagram.png" type="image/x-icon">
+
+<body>
+  <div id="login-box">
+    <div class="left">
+      <h1 id="status">Login to IClone</h1>
+      <input type="text" id="email" name="email" placeholder="E-mail" />
+      <input type="password" id="password" name="password" placeholder="Password" />
+
+      <input type="button" id="login" name="login" value="Login" />
+      <button type="button" id="sighUp">Cria conta agora</button>
+    </div>
+
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+
+      <button class="social-signin facebook" id="btnFacebook">
+        Log in with Facebook
+      </button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google</button>
+    </div>
+    <div class="or">OR</div>
+  </div>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js';
+  import {
+    getStorage
+  } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-storage.js";
+  import {
+    getDatabase,
+    get,
+    set,
+    ref,
+    update,
+  } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js';
+  import {
+    getAuth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut,
+  } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js';
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: 'AIzaSyCelJOd0KUgjibCORgurx7leCnFw7cYqUY',
+    authDomain: 'i-clone-database.firebaseapp.com',
+    databaseURL: 'https://i-clone-database-default-rtdb.firebaseio.com',
+    projectId: 'i-clone-database',
+    storageBucket: 'i-clone-database.appspot.com',
+    messagingSenderId: '204245354492',
+    appId: '1:204245354492:web:ad9b8a76724a51f665d479',
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth(app);
+  // console.log(auth);
+
+  // declarar variáveis do Storage
+  const storage = getStorage();
+  //const storageReference = ref(storage);
+  const bytes = new Uint8Array([0x48, 0x65, 0x6c, 0x6f, 0x2c, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21])
+
+  //btnFacebook.addEventListener('click', (e) => alert('face'));
+
+  const addUser = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+
+        const docRef = ref(database, 'users/' + user.uid);
+        //const docRef = ref(database, 'posts/' + new Date().getTime());
+        set(docRef, {
+          email: email,
+          password: password,
+          uid: user.uid,
+        });
+
+        alert('User has been created!');
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        console.log(errorMessage);
+        // ..
+      });
+  };
+
+  const sighUp = document.querySelector('#sighUp');
+  sighUp.addEventListener('click', (e) => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    addUser(email, password);
+  });
+
+  // Login
+  const login = document.querySelector('#login');
+  login.addEventListener('click', (e) => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+
+        const dt = new Date();
+        const docRef = ref(database, 'users/' + user.uid);
+        console.log(user)
+        update(docRef, {
+          last_login: dt.toISOString(),
+        }).then(() => {
+          get(docRef).then(userDoc => {
+            sessionStorage.setItem('user', JSON.stringify(userDoc.val()))
+            window.location.href = 'index.html';
+          })
+        })
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, error.message);
+
+        if (
+          errorCode === 'auth/user-not-found'
+          // && confirm('Queres-te registar no site?')
+        ) {
+          // proceed signup
+          //addUser(email, password);
+          alert('You are not registed.');
+        }
+      });
+  });
+
+  const user = auth.currentUser;
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+    } else {
+      // User is signed out
+    }
+  });
+
+</script>
+
+</html>

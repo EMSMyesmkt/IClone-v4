@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-content-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>IClone | The best Insta Clone</title>
+  <link rel="shortcut icon"
+    href="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2FInstagram.png?alt=media&token=9cd59965-660e-4ca9-8998-ac4806beaebb"
+    type="image/x-icon">
+  <title>Instagram Clone</title>
+  <script src="timer.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Flogo.PNG?alt=media&token=03976993-610a-467d-bb79-c7a68d7d76b5"
+        class="brand-img" alt="">
+        <input type="text" class="search-box" placeholder="search">
+        <div class="nav-items">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fhome.PNG?alt=media&token=65b38a8b-c377-4e99-84a7-5a9b92f93658"
+          class="icon" alt="">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcomment.PNG?alt=media&token=6c76a261-bd4e-4368-8cfd-79df59505bea"
+          class="icon" alt="">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fadd.PNG?alt=media&token=56a5f223-ed5f-4444-83dc-1a4180f7b996"
+          class="icon" alt="">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fexplore.PNG?alt=media&token=996974ef-2994-44bc-b4a8-d33dbd115976"
+          class="icon" alt="">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Flike.PNG?alt=media&token=f6511888-aeee-4d75-b64f-750c5bc8f965"
+          class="icon" alt="">
+        
+        <img
+          class="icon user-profile" alt="" id="user-profile">
+
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Flogout.png?alt=media&token=a7bb4be5-613d-4e44-90fe-22425a23eb16"
+          class="icon" alt="" id="logout" name="logout" value="Logout">
+      </img>
+    </div>
+    </div>
+  </nav>
+
+  <section class="main">
+    <div class="wrapper">
+      <div class="left-col active hide">
+        <div class="status-wrapper">
+
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/21.jpg" alt="card-img">
+            </div>
+            <p class="username">Marcus Picard</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/22.jpg" alt="card-img">
+            </div>
+            <p class="username">Jim Schmidt</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/23.jpg" alt="card-img">
+            </div>
+            <p class="username">ستایش موسوی</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/24.jpg" alt="card-img">
+            </div>
+            <p class="username">Luca Louis</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/25.jpg" alt="card-img">
+            </div>
+            <p class="username">Oliver Taylor</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/26.jpg" alt="card-img">
+            </div>
+            <p class="username">Zhin Yang</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/28.jpg" alt="card-img">
+            </div>
+            <p class="username">Cody Murray</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/29.jpg" alt="card-img">
+            </div>
+            <p class="username">Tyler Hunter</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/30.jpg" alt="card-img">
+            </div>
+            <p class="username">Michael P.</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/31.jpg" alt="card-img">
+            </div>
+            <p class="username">Porfirio C.</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/32.jpg" alt="card-img">
+            </div>
+            <p class="username">Troy Jordan</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/33.jpg" alt="card-img">
+            </div>
+            <p class="username">Samuel H.</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="https://randomuser.me/api/portraits/thumb/men/34.jpg" alt="card-img">
+            </div>
+            <p class="username">Terri Zou</p>
+          </div>
+        </div>
+
+        <button onclick="show(-1)">&lt;</button>
+        <button onclick="show(+1)">&gt;</button>
+        <style>
+          button.prev, button.next {
+            display: flex; font-size: 32px;
+            align-items: center; justify-content: center;
+            color: #FFF; background-color: #333;
+            border-radius: 50%;
+            width: 44px; height: 44px;
+          }
+          button.prev {
+            position: absolute; left: 0; top: 80px;
+          }
+          button.next {
+            position: absolute; right: 0; top: 80px;
+          }
+        </style>
+
+        <div class="posts"></div>
+        <!--div class="one-post">
+          <div class="post">
+            <div class="info">
+              <div class="user">
+                <div class="profile-pic-1"><img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%201.jpeg?alt=media&token=f17aec73-cd2a-43de-826c-35c1e16e974d" alt=""></div>
+                <p class="username">eduardo_jpn</p>
+              </div>
+              <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Foption.PNG?alt=media&token=2120365a-988a-4a09-b4bf-ad76dba65430" class="options" alt="">
+            </div>
+          </div>
+          <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%201.jpeg?alt=media&token=f17aec73-cd2a-43de-826c-35c1e16e974d" class="post-image" alt="">
+          <div class="post-content">
+            <div class="reaction-wrapper">
+              <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Flike.PNG?alt=media&token=f6511888-aeee-4d75-b64f-750c5bc8f965" class="icon" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcomment.PNG?alt=media&token=6c76a261-bd4e-4368-8cfd-79df59505bea" class="icon" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fsend.PNG?alt=media&token=7757de15-421d-46c8-855f-0fe519f04494" class="icon" alt="">
+              <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fsave.PNG?alt=media&token=ee498710-0161-45dd-a0dd-a29d35613eb9" class="save icon" alt="">
+            </div>
+
+            <p class="likes">1,015 likes</p>
+            <p class="description"><span>eduardo_jpn</span>o pai tá on 🔥</p>
+            <p class="description"><span>walter_gandarella</span>tu foi onde, man?</p>
+            <p class="post-time">3 MINUTES AGO</p>
+          </div>
+          <div class="comment-wrapper">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%201.jpeg?alt=media&token=f17aec73-cd2a-43de-826c-35c1e16e974d" class="icon" alt="">
+            <input type="text" class="comment-box" placeholder="Add a comment">
+            <button class="comment-btn">Post</button>
+          </div>
+        </div-->
+
+        <!--div class="one-post">
+          <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic-2"><img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%202.png?alt=media&token=29246ce1-3056-4e6c-8b7d-4ded8f3da7c7" alt=""></div>
+              <p class="username">pedro_dev</p>
+            </div>
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Foption.PNG?alt=media&token=2120365a-988a-4a09-b4bf-ad76dba65430" class="options" alt="">
+          </div>
+        </div>
+        <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%202.png?alt=media&token=29246ce1-3056-4e6c-8b7d-4ded8f3da7c7" class="post-image" alt="">
+        <div class="post-content">
+          <div class="reaction-wrapper">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Flike.PNG?alt=media&token=f6511888-aeee-4d75-b64f-750c5bc8f965" class="icon" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcomment.PNG?alt=media&token=6c76a261-bd4e-4368-8cfd-79df59505bea" class="icon" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fsend.PNG?alt=media&token=7757de15-421d-46c8-855f-0fe519f04494" class="icon" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fsave.PNG?alt=media&token=ee498710-0161-45dd-a0dd-a29d35613eb9" class="save icon" alt="">
+          </div>
+
+          <p class="likes">985 likes</p>
+          <p class="description"><span>pedro_dev</span>Nova foto de perfil :D</p>
+          <p class="description"><span>walter_gandarella</span>Pedro, entra na call, estás atrasado 😡</p>
+          <p class="description"><span>eduardo_jpn</span> Ahahah! 😂</p>
+          <p class="post-time">10 MINUTES AGO</p>
+        </div>
+        <div class="comment-wrapper">
+          <img src="img/cover 1.jpeg" class="icon" alt="">
+          <input type="text" class="comment-box" placeholder="Add a comment">
+          <button class="comment-btn">Post</button>
+        </div>
+
+        </div>
+
+        <div class="one-post">
+          <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic-3"><img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%203.png?alt=media&token=9d1ad8e3-a0ec-4d75-b617-e1592ed510d1" alt=""></div>
+              <p class="username">joão_batista</p>
+            </div>
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Foption.PNG?alt=media&token=2120365a-988a-4a09-b4bf-ad76dba65430" class="options" alt=""
+          </div>
+        </div>
+        <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%203.png?alt=media&token=9d1ad8e3-a0ec-4d75-b617-e1592ed510d1" class="post-image" alt="">
+        <div class="post-content">
+          <div class="reaction-wrapper">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Flike.PNG?alt=media&token=f6511888-aeee-4d75-b64f-750c5bc8f965" class="icon" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcomment.PNG?alt=media&token=6c76a261-bd4e-4368-8cfd-79df59505bea" class="icon" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fsend.PNG?alt=media&token=7757de15-421d-46c8-855f-0fe519f04494" class="icon" alt="">
+            <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fsave.PNG?alt=media&token=ee498710-0161-45dd-a0dd-a29d35613eb9" class="save icon" alt="">
+          </div>
+
+          <p class="likes">654 likes</p>
+          <p class="description"><span>joão_batista</span>Esta versão do Instagram é excelente para o meu trabalho como designer!</p>
+          <p class="description"><span>walter_gandarella</span>Olha quem decidiu aparecer por aqui!</p>
+          <p class="post-time">15 MINUTES AGO</p>
+        </div>
+        <div class="comment-wrapper">
+          <img src="img/cover 1.jpeg" class="icon" alt="">
+          <input type="text" class="comment-box" placeholder="Add a comment">
+          <button class="comment-btn" id="post">Post</button>
+        </div>
+
+        </div>
+
+      </div-->
+      </div>
+      <div class="right-col">
+        <div class="profile-card">
+          <div class="profile-pic">
+              <img src="https://firebasestorage.googleapis.com/v0/b/i-clone-database.appspot.com/o/img%2Fcover%201.jpeg?alt=media&token=7c41e721-8129-4250-95db-6e5a62da0b6e" alt="">
+          </div>
+        <div>
+              <p class="username">eduardo_jpn</p>
+              <p class="sub-text">Eduardo M.</p>
+          </div>
+          <button class="action-btn">switch</button>
+        </div>
+        <div class="suggestion-text">Suggestions for you</div>
+
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="https://randomuser.me/api/portraits/thumb/women/21.jpg" alt="">
+          </div>
+          <div>
+            <p class="username">Oriyana Erstenyuk</p>
+            <p class="sub-text">Recommended by Instagram</p>
+          </div>
+          <button class="action-btn">follow</button>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="https://randomuser.me/api/portraits/thumb/women/22.jpg" alt="">
+          </div>
+          <div>
+            <p class="username">Kate Parker</p>
+            <p class="sub-text">Recommended by Instagram</p>
+          </div>
+          <button class="action-btn">follow</button>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="https://randomuser.me/api/portraits/thumb/women/24.jpg" alt="">
+          </div>
+          <div>
+            <p class="username">Kay Angelina</p>
+            <p class="sub-text">followed by user</p>
+          </div>
+          <button class="action-btn">follow</button>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="https://randomuser.me/api/portraits/thumb/women/25.jpg" alt="">
+          </div>
+          <div>
+            <p class="username">Rosa Rogers</p>
+            <p class="sub-text">followed by user</p>
+          </div>
+          <button class="action-btn">follow</button>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="https://randomuser.me/api/portraits/thumb/women/26.jpg" alt="">
+          </div>
+          <div>
+            <p class="username">Ely Mendes</p>
+            <p class="sub-text">followed by user</p>
+          </div>
+          <button class="action-btn">follow</button>
+        </div>
+
+        <div class="profile-card">
+          <div class="change-btn">
+            <link href="index.js"><button id="change-btn">Change Users</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js';
+  import {
+    getStorage,
+    ref as stRef,
+    uploadBytes
+  } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-storage.js';
+  import {
+    getDatabase,
+    set,
+    get,
+    ref,
+    update,
+    onValue,
+  } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js';
+  import {
+    getAuth,
+    onAuthStateChanged,
+    signOut
+  } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js';
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: 'AIzaSyCelJOd0KUgjibCORgurx7leCnFw7cYqUY',
+    authDomain: 'i-clone-database.firebaseapp.com',
+    databaseURL: 'https://i-clone-database-default-rtdb.firebaseio.com',
+    projectId: 'i-clone-database',
+    storageBucket: 'i-clone-database.appspot.com',
+    messagingSenderId: '204245354492',
+    appId: '1:204245354492:web:ad9b8a76724a51f665d479',
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth(app);
+  // console.log(database);
+
+  // declarar variáveis do Storage
+  const storage = getStorage();
+  const storageRef = stRef(storage);
+
+  // Logout
+  const logout = document.querySelector('#logout');
+  logout.addEventListener('click', e => {
+    e.preventDefault();
+    auth.signOut();
+    alert('User has logged out. See ya next time!');
+    window.location.href = 'login.html'
+  });
+
+  /*loadUsers(ref, onValue, database).then(users => {
+    console.log(users)
+
+    for (const user of users) {
+      const postRef = ref(database, `posts/${new Date().getTime()}`);
+      set(postRef, {
+        user: user,
+        comments: [],
+        likes: 0,
+        createdAt: new Date().toISOString(),
+        text: 'descrição da imagem',
+        image: user.image
+      });
+    }
+  })*/
+
+  // Inicialize Posts / Inicializar Postagens
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initApp(ref, onValue, database, update)
+  });
+
+  const user = JSON.parse(sessionStorage.getItem('user'))
+</script>
+
+<script src="index.js"></script>
+
+</html>
